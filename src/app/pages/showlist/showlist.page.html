@@ -1,0 +1,63 @@
+<ion-content>
+  
+  <div class="list_details_back">
+    <div class="buttons">
+      <div class="ion-activatable ripple-parent">
+        <ion-button color="black" [routerLink]="['/home']">          
+            BACK TO HOME
+            <ion-ripple-effect></ion-ripple-effect>
+        </ion-button>
+      </div>
+      <div class="ion-activatable ripple-parent">
+        <ion-button color="black" (click)="fetchdata()">          
+            FETCH LIST
+            <ion-ripple-effect></ion-ripple-effect>
+        </ion-button>
+      </div>
+    </div>
+    
+    <h1>Student List Here</h1>
+    <div class="filter_area">     
+      <input type="text" name="searchCountry" [(ngModel)]="searchCountry" (ngModelChange)="SearchCountryMethod()"  placeholder="Search by Country..">
+      
+    </div>
+    <div *ngIf="loading" class="loader">
+      <div><img src="assets/images/loader.gif" alt=""></div>
+    </div>
+    <ul class="show_list_area" *ngFor="let list of students | paginate:{itemsPerPage: 4, currentPage: p}; index as i">
+     
+      <li>
+        <span >ID</span>
+        <span>{{list.id}}</span>
+      </li>
+      <li>
+        <span>Name</span>
+        <span>{{list.name}}</span>
+      </li>
+      <li>
+        <span>Email</span>
+        <span>{{list.email}}</span>
+      </li>
+      <li>
+        <span>Phone</span>
+        <span>{{list.phone}}</span>
+      </li>
+      <li>
+        <span>Country</span>
+        <span>{{list.country}}</span>
+      </li>
+      <li>
+        <span>ZipCode</span>
+        <span>{{list.zipCode}}</span>
+      </li><li>
+        <span>Address</span>
+        <span>{{list.address}}</span>
+      </li>      
+    </ul>
+    <div class="pagination_area d-flex justify-content-end">
+      <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+    </div>
+  </div>
+  
+
+</ion-content>

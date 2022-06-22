@@ -1,0 +1,44 @@
+<ion-content>
+    <div class="forms_section">
+       <a href="" class="logo"><img src="assets/images/logo.png" alt=""></a>
+       <form [formGroup]="addstudent" (ngSubmit)="saveData()">
+            <div class="profile_pic_area">
+                <img src="assets/images/pro_pic.webp" alt="">
+                <h2>Take a Photo</h2>
+                <p>With Your Phone</p>                          
+            </div>
+            
+            
+            <div class="personal_info_area">
+                
+                <div class="portion">
+                    <input type="text" required placeholder="Name" formControlName="name" >
+                </div>
+                <div class="portion">
+                    <input type="email" required placeholder="Email" formControlName="email" >
+                </div>
+                <div class="portion">
+                    <input type="text" required placeholder="Phone No" formControlName="phone">
+                </div>
+                <div class="portion">
+                    <input type="text" required placeholder="Country" formControlName="country">
+                </div>
+                <div class="portion">
+                    <input type="text" required placeholder="Zip Code" formControlName="zipCode">
+                </div>
+               
+                <div class="portion">
+                    <textarea required placeholder="Address" formControlName="address"></textarea>
+                </div>
+                
+            </div>
+
+            
+
+            <div class="button_back">               
+                <input type="submit" value="SHOWLIST" [disabled]="!addstudent.valid" >
+            </div>  
+       </form>
+       
+    </div>
+</ion-content>

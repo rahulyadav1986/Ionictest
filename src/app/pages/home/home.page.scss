@@ -1,0 +1,106 @@
+.forms_section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    form{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .logo{
+        img{
+            display: block;
+        }
+    }
+    .profile_pic_area{
+        width: 100%;
+        padding: 5rem 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100%;
+        }
+        h2{
+            margin-bottom: 10px;
+            color: #9e49ed;
+        }
+        p{
+            font-size: 14px;
+            line-height: 2rem;
+            color: rgb(117, 117, 117); 
+            margin: 0;
+        }
+        ion-button{           
+            margin-top: 2rem;
+            ion-icon{
+                margin-right: 10px;
+            }
+        }
+       
+    }
+    .button_back{
+        input[type="submit"]:disabled{
+            opacity: .5;
+        }
+    }
+    .personal_info_area{
+        width: 100%;
+        margin-top: 3rem;
+        
+        .portion{
+            width: 100%;
+            margin-bottom: 2rem;
+            label{
+                font-size: 16px;
+                margin-bottom: 10px;
+                display: block;
+            }
+            
+            input{
+                width: 100%;
+                height: 4rem;
+                background-color: #f7f7f7;
+                padding: 0 15px;
+                border: rgba(0,0,0,.1) 1px solid;
+                outline-style: none;
+                font-size: 14px;
+                &.ng-invalid{
+                    &.ng-touched{
+                        border-color: red !important;
+                        box-shadow: rgba(255,0,0,.1) inset 1px 0 3rem;
+                    }
+                }
+                
+            }
+            
+            textarea{
+                width: 100%;
+                height: 10rem;
+                background-color: #f7f7f7;
+                padding: 15px;
+                border: rgba(0,0,0,.1) 1px solid;
+                outline-style: none;
+                resize: none;
+                font-size: 14px;
+                &.ng-invalid{
+                    &.ng-touched{
+                        border-color: red !important;
+                        box-shadow: rgba(255,0,0,.1) inset 1px 0 3rem;
+                    }
+                }
+            }
+        }
+    }
+    .button_back{
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
